@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Company Profile</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="profile.css">
+        <!-- RemixIcon CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://kit.fontawesome.com/de152fe019.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header class="container">
+            <nav class="nav">
+                <div class="logo" id="home">
+                    <img src="https://assets.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg" alt="">
+                </div>
+                <div class="nav_menu" id="nav_menu_contain">
+                    <button class="close_btn" id="close_btn">
+                        <i class="ri-close-fill"></i>
+                    </button>
+                    <ul class="nav_menu_list">
+                        <li class="nav_menu_item">
+                            <a href="index.html" class="nav_menu_link">Home</a>
+                        </li>
+                        <li class="nav_menu_item">
+                            <a href="profile.html" class="nav_menu_link">Our Profile</a>
+                        </li>
+                        <li class="nav_menu_item">
+                            <a href="#" class="nav_menu_link">Portofolio</a>
+                        </li>
+                        <li class="nav_menu_item">
+                            <a href="#" class="nav_menu_link">Message Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="toggle_btn" id="toggle_btn">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </nav>
+        </header>
+        <section class="wrapper">
+            <div class="container">
+              <div class="grid-cols-2">
+                <div class="grid-item-1">
+                  <h1 class="main-heading">
+                    <span>Join Indonesia’s Largest Live Online Learning Community.</span>
+                  </h1>
+                  <p class="info-text">
+                    Recession Proof your Career by learning the most valuable digital skills from the Best in the Industry. 100% Live Online Classes, Career Mentors, and Lifelong Community support to unlock endless opportunities.
+                  </p>
+      
+                  <div class="btn_wrapper">
+                    <button class="btn view_more_btn" onclick="location.href='#product'" type="button">
+                      Explore <i class="ri-arrow-right-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="grid-item-2">
+                  <div class="team_img_wrapper">
+                    <img src="img/ilus_learning.png" alt="team-img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="wrapper_next">
+            <div class="container">
+              <div class="grid-cols-2">
+                <div class="grid-item-1">
+                  <h1 class="main-heading">
+                    <span>Knowledge is the best legacy.</span>
+                  </h1>
+                  <p class="info-text">
+                    Platform yang sempurna buat kamu yang ingin terjun di dunia digital. Jangan ragu jangan segan, bersama <b>RevoU</b> kita jangkau dunia digital.
+                  </p>
+                </div>
+                <div class="grid-item-2">
+                  <div class="team_img_wrapper">
+                    <img src="img/digital.jpg" alt="team-img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="join_us">
+            <h1 class="title">Why Join Us?</h1>
+            <br>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                      <h3>Our Instructors are the Best Digital Experts in the Industry</h3>
+                      <br>
+                      <p>Gain the latest, in-demand skills from elite instructors at top-notch companies. Our instructors are the best in the industry, selected through a rigorous screening process for their technical expertise and teaching ability!</p>
+                    </div>
+                  </div>
+                
+                  <div class="column">
+                    <div class="card">
+                      <h3>Lifelong Community Network with Endless Opportunities</h3>
+                      <br>
+                      <p>Connect with the alumni community of over 6000+ people and unlock life-long career opportunities!</p>
+                    </div>
+                  </div>
+                  
+                  <div class="column">
+                    <div class="card">
+                      <h3>Projects & Case Studies to Get You Job Ready</h3>
+                      <br>
+                      <p>Grow your portfolio and skills with personalized mentor guidance on projects and case studies, plus valuable feedback from instructors and team leads</p>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="card">
+                      <h3>Personalized 1:1 Career Support to Transform Your Professional Life</h3>
+                      <br>
+                      <p>Get customized career support to excel during your job search and stay motivated in your career development journey!</p>
+                    </div>
+                  </div>
+            </div>
+          </section>
+                <script>
+
+                    // responsive nav
+                    const navID = document.getElementById("nav_menu_contain"),
+                        ToggleBtnId = document.getElementById("toggle_btn"),
+                        CloseBtnId = document.getElementById("close_btn");
+                        ToggleBtnId.addEventListener("click", () => {
+                            navID.classList.add("show");
+                        });
+                        CloseBtnId.addEventListener("click", () => {
+                            navID.classList.remove("show");
+                        });
+                    //nav_menu
+                    gsap.from(".nav_menu_list .nav_menu_item", {
+                        opacity: 0,
+                        y: -10,
+                        delay: 1.4,
+                        duration: 0.5,
+                        stagger: 0.3,
+                    });
+                    // ==== TOGGLE BTN ==== //
+                    gsap.from(".toggle_btn", {
+                        opacity: 0,
+                        y: -10,
+                        delay: 1.4,
+                        duration: 0.5,
+                    });
+                    
+                </script>
+            </div>
+        </section>
+        <footer>
+            <p>Created by RevoU</p>
+        </footer>
+    </body>
+</html>

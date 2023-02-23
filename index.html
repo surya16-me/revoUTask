@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Company Profile</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="index.css">
+        <!-- RemixIcon CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://kit.fontawesome.com/de152fe019.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header class="container">
+            <nav class="nav">
+                <div class="logo" id="home">
+                    <img src="https://assets.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg" alt="">
+                </div>
+                <div class="nav_menu" id="nav_menu_contain">
+                    <button class="close_btn" id="close_btn">
+                        <i class="ri-close-fill"></i>
+                    </button>
+                    <ul class="nav_menu_list">
+                        <li class="nav_menu_item">
+                            <a href="index.html" class="nav_menu_link">Home</a>
+                        </li>
+                        <li class="nav_menu_item">
+                            <a href="profile.html" class="nav_menu_link">Our Profile</a>
+                        </li>
+                        <li class="nav_menu_item">
+                            <a href="#" class="nav_menu_link">Portofolio</a>
+                        </li>
+                        <li class="nav_menu_item">
+                            <a href="#" class="nav_menu_link">Message Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="toggle_btn" id="toggle_btn">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </nav>
+        </header>
+        <section class="greeting">
+            <h1 class="greet">Hi <span id="nama_user"></span>, Welcome to RevoU Company</h1><br><br><br>
+            <p class="desc">Join Indonesia’s Largest Live Online Learning Community
+                Recession Proof your Career by learning the most valuable digital skills from the Best in the Industry. 100% Live Online Classes, Career Mentors, and Lifelong Community support to unlock endless opportunities.</p>
+            <!-- <img src="img/img_home.jpg" alt="Company Look"> -->
+            <br><br>
+
+            <h2>Our Instructors are the Best Digital Experts in the Industry</h2>
+            <p>Gain the latest, in-demand skills from elite instructors at top-notch companies. Our instructors are the best in the industry, selected through a rigorous screening process for their technical expertise and teaching ability!</p>
+            <h2>Lifelong Community Network with Endless Opportunities</h2>
+            <p>Connect with the alumni community of over 6000+ people and unlock life-long career opportunities!</p>
+            <h2>Projects & Case Studies to Get You Job Ready</h2>
+            <p>Grow your portfolio and skills with personalized mentor guidance on projects and case studies, plus valuable feedback from instructors and team leads</p>
+        </section>
+        <section class="headquarter">
+            <h1>Our Headquarters</h1>
+            <div class="row">
+                <div class="column">
+                    <img src="img/jkt.jpg" alt=""><br>
+                    <caption>Jakarta</caption>
+                </div>
+                <div class="column">
+                    <img src="img/bdg.jpg" alt=""><br>
+                    <caption>Bandung</caption>
+                </div>
+                <div class="column">
+                    <img src="img/sby.jpg" alt=""><br>
+                    <caption>Surabaya</caption>
+                </div>
+            </div>
+        </section>
+        <section class="message">
+            <h1>Message Us</h1>
+            <div class="form">
+                <form action="" id="message_form" method="get">
+                    <table>
+                        <tr>
+                            <td><label for="">Nama</label></td>
+                            <td>:</td>
+                            <td colspan="4"><input type="text" name="nama" id="nama" placeholder="Nama" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Tanggal lahir</label></td>
+                            <td>:</td>
+                            <td colspan="4"><input type="date" name="tl" id="tl" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Jenis kelamin</label></td>
+                            <td>:</td>
+                            <td><input type="radio" name="Laki-laki" id="jk" value="Laki-laki"></td>
+                            <td>Laki-laki</td>
+                            <td><input type="radio" name="Perempuan" id="jk" value="Perempuan"></td>
+                            <td>Perempuan</td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Pesan</label></td>
+                            <td>:</td>
+                            <td colspan="4"><textarea name="pesan" id="pesan" cols="70" rows="10" placeholder="Pesan" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6"><button class="btn_submit" type="submit">Submit</button></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>
+                
+                <div class="table_output">
+                    <ul>
+                        <li>Currentime <span>: </span><span id='date-time'></span></li><br><br>
+                        <li>Nama <span>: </span><span id="nama_ot"></span></li>
+                        <li>Tanggal lahir <span>: </span><span id="tl_ot"></span></li>
+                        <li>Jenis kelamin <span>: </span><span id="jk_ot"></span></li>
+                        <li>Pesan <span>: </span><span id="pesan_ot"></span></li>
+                    </ul>
+                </div>
+                <script>
+
+                    
+
+                    //form_message_submit
+
+                    let form = document.getElementById("message_form");
+
+                    form.addEventListener("submit", (e) =>{
+                        e.preventDefault();
+
+                        let nama = document.getElementById("nama");
+                        let tl = document.getElementById("tl");
+                        let jk = document.getElementById("jk");
+                        let pesan = document.getElementById("pesan");
+
+                        document.getElementById('nama_user').innerHTML=nama.value;
+                        document.getElementById('nama_ot').innerHTML=nama.value;
+                        document.getElementById('tl_ot').innerHTML=tl.value;
+                        document.getElementById('jk_ot').innerHTML=jk.value;
+                        document.getElementById('pesan_ot').innerHTML=pesan.value;
+                        
+                    });
+
+                    var dt = new Date();
+                    document.getElementById('date-time').innerHTML=dt;
+
+                    // responsive nav
+                    const navID = document.getElementById("nav_menu_contain"),
+                        ToggleBtnId = document.getElementById("toggle_btn"),
+                        CloseBtnId = document.getElementById("close_btn");
+                        ToggleBtnId.addEventListener("click", () => {
+                            navID.classList.add("show");
+                        });
+                        CloseBtnId.addEventListener("click", () => {
+                            navID.classList.remove("show");
+                        });
+                    //nav_menu
+                    gsap.from(".nav_menu_list .nav_menu_item", {
+                        opacity: 0,
+                        y: -10,
+                        delay: 1.4,
+                        duration: 0.5,
+                        stagger: 0.3,
+                    });
+                    // ==== TOGGLE BTN ==== //
+                    gsap.from(".toggle_btn", {
+                        opacity: 0,
+                        y: -10,
+                        delay: 1.4,
+                        duration: 0.5,
+                    });
+                    
+                </script>
+            </div>
+        </section>
+        <footer>
+            <p>Created by RevoU</p>
+        </footer>
+    </body>
+</html>
